@@ -1,0 +1,100 @@
+@import url("https://use.typekit.net/atc1hww.css");
+
+* {
+  margin: 0;
+  font-family: din-2014, sans-serif;
+}
+
+html{
+  background: rgb(230,220,193);
+}
+
+.title {
+  height: 130px;
+  width: 100%;
+  margin: 20px 0;
+  color:rgb(6,102,106);
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.display {
+  position: relative;
+  top:50px;
+  width: 100%;
+  height: 1000px;
+}
+
+.shuffle_button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 120px;
+  height: 50px;
+  margin: 30px 0px;
+  color: rgb(230,220,193);;
+  background: rgb(245,87,0);
+  border-radius: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; */
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  user-select: none;
+  transition: all ease 0.3s;
+}
+.shuffle_button:hover {
+  box-shadow: none;
+  transform: translateX(-50%) translateY(3px);
+}
+
+.shuffle_display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: center;
+  position:absolute;
+  top:150px;
+  left:0;
+  right:0;
+  width: 95%;
+  margin: auto auto;
+  /* background: white; */
+}
+
+.box{
+  width: 100px;
+  height:100px;
+  margin: 2vw;
+}
+
+.box.box_display_0{
+  position: relative;
+  background: rgb(6,102,106);
+}
+
+.box.box_display_1{
+  position: relative;
+  clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%);
+  background: rgb(245,87,0);
+}
+
+.number{
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.number_0{
+position: absolute;
+left:10px;
+top:10px;
+}
+
+.number_1{
+  position: absolute;
+  right:10px;
+  bottom:10px;
+}
+
