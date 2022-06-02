@@ -9,32 +9,35 @@ var absent = 0;
 
 document
   .getElementsByClassName("setting_button")[0]
-  .addEventListener("click", () => {
-    class_number = element.value;
-    if (0 < element.value) {
-      effect.classList.add("on");
-      blackout.classList.add("on");
-      setting_display.classList.add("open");
-      setting_button.classList.add("open");
-      setting_toggle = true;
-
-      if (class_number !== class_number_save) {
-        remove_absent_numbers();
-        set_absent_numbers();
-      }
-      class_number_save = class_number;
-    }
-  });
+  .addEventListener("click", open_setting);
 
 document
   .getElementsByClassName("close_button")[0]
-  .addEventListener("click", () => {
-    effect.classList.remove("on");
-    blackout.classList.remove("on");
-    setting_display.classList.remove("open");
-    setting_button.classList.remove("open");
-    setting_toggle = false;
-  });
+  .addEventListener("click", close_setting);
+
+function open_setting() {
+  class_number = element.value;
+  if (0 < element.value) {
+    effect.classList.add("on");
+    blackout.classList.add("on");
+    setting_display.classList.add("open");
+    setting_button.classList.add("open");
+    setting_toggle = true;
+
+    if (class_number !== class_number_save) {
+      remove_absent_numbers();
+      set_absent_numbers();
+    }
+    class_number_save = class_number;
+  }
+}
+function close_setting() {
+  effect.classList.remove("on");
+  blackout.classList.remove("on");
+  setting_display.classList.remove("open");
+  setting_button.classList.remove("open");
+  setting_toggle = false;
+}
 
 function set_absent_numbers() {
   for (let i = 0; i < class_number; i++) {

@@ -49,9 +49,19 @@ document
         }
       }
       for (let i = 0; i < class_number; i++) {
-        number[i] = i + 1;
+        if (qu_successful) {
+          number[i] = names[i];
+        } else {
+          number[i] = i + 1;
+        }
       }
       Shuffle();
+      if (qu_successful) {
+        let elements = document.getElementsByClassName("number");
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].style.fontSize = " 20px";
+        }
+      }
     }
   });
 

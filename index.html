@@ -6,7 +6,11 @@
     <title>Matching</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="setting/absent.css" />
+    <link rel="stylesheet" href="setting/qrcode.css" />
     <link rel="stylesheet" href="setting/setting.css" />
+
+    <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
   </head>
 
   <style></style>
@@ -19,13 +23,20 @@
           <p class="p1">Absent?</p>
           <div class="absent_numbers"></div>
         </div>
+        <div class="qr_diplay">
+          <p class="p1">need names?</p>
+          <label class="qr_button">
+            <input type="file" accept="image/*" id="qr" />import QRCode
+          </label>
+        </div>
+        <canvas id="canvas" width="500" height="500"></canvas>
       </div>
     </div>
     <div class="blackout"></div>
     <div class="effect">
       <p class="title">Matching</p>
       <div class="cp_iptxt">
-        <input class="ef" type="number" />
+        <input class="ef" type="number" value="10" />
         <label>人数</label>
         <span class="focus_line"></span>
       </div>
@@ -41,6 +52,7 @@
       </div>
     </div>
     <script type="text/javascript" src="shuffle/shuffle.js"></script>
-    <script type="text/javascript" src="setting/setting.js"></script>
+    <script type="text/javascript" src="setting/absent.js"></script>
+    <script type="text/javascript" src="setting/qrcode.js"></script>
   </body>
 </html>
