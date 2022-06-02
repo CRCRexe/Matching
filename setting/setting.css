@@ -1,0 +1,109 @@
+.setting_button {
+  width: 100px;
+  background: rgb(6, 102, 106);
+  transform: rotateZ(0);
+  transition: all ease 0.3s;
+}
+
+.setting_button.open {
+  width: 100px;
+  transform: rotateZ(-5deg);
+  background: rgb(10, 139, 146);
+}
+
+.setting_display {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background: rgb(6, 102, 106);
+  border-radius: 20px;
+  opacity: 0%;
+  z-index: 100;
+  pointer-events: none;
+  user-select: none;
+  transform: scale(105%);
+  transition: all ease 0.3s;
+}
+.setting_display.open {
+  transform: scale(100%);
+  opacity: 100%;
+  pointer-events: all;
+  user-select: none;
+}
+
+.close_button {
+  width: 120px;
+  height: 40px;
+  margin: 30px auto;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+
+  user-select: none;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.close_button:hover {
+  transform: scale(105%) rotate(-1deg);
+}
+
+.setting {
+  position: relative;
+}
+
+.absent_diplay {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.absent_numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: center;
+  /* background-color: brown; */
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+
+.absent_number {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  color: white;
+  background: rgb(245, 87, 0);
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.absent_number.on {
+  color: black;
+  background: white;
+}
+
+.absent_number:hover {
+  transform: scale(110%) rotate(2deg);
+}
+
+.p1 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}

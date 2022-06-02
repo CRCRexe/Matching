@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matching</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="number.css" />
-</head>
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="setting/setting.css" />
+  </head>
 
-<style>
+  <style></style>
 
-</style>
-
-<body>
-    <p class="title">Matching</p>
-    <div class="cp_iptxt">
-        <input class="ef" type="number">
+  <body>
+    <div class="setting_display">
+      <div class="close_button">close</div>
+      <div class="setting">
+        <div class="absent_diplay">
+          <p class="p1">Absent?</p>
+          <div class="absent_numbers"></div>
+        </div>
+      </div>
+    </div>
+    <div class="blackout"></div>
+    <div class="effect">
+      <p class="title">Matching</p>
+      <div class="cp_iptxt">
+        <input class="ef" type="number" />
         <label>人数</label>
         <span class="focus_line"></span>
-    </div>
-    <div class="display">
-        <div class="shuffle_button">Shuffle</div>
-        <div class="shuffle_display">
+      </div>
+      <div class="display">
+        <div class="buttons">
+          <div class="bt shuffle_button">Shuffle</div>
+          <div class="bt setting_button">Setting</div>
         </div>
-        <div class="shuffle_display">
+        <div class="boxes">
+          <div class="shuffle_display"></div>
+          <div class="shuffle_display"></div>
         </div>
+      </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
-</body>
-
+    <script type="text/javascript" src="shuffle/shuffle.js"></script>
+    <script type="text/javascript" src="setting/setting.js"></script>
+  </body>
 </html>

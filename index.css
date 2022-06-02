@@ -5,36 +5,70 @@
   font-family: din-2014, sans-serif;
 }
 
-html{
-  background: rgb(230,220,193);
+html {
+  background: rgb(230, 220, 193);
+}
+
+.effect {
+  filter: blur(0);
+  transform: scale(100%);
+  transition: all ease 0.3s;
+}
+.effect.on {
+  transform: scale(95%);
+  pointer-events: none;
+  user-select: none;
+  filter: blur(6px);
+}
+
+.blackout {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: black;
+  opacity: 0%;
+  user-select: none;
+  pointer-events: none;
+}
+.blackout.on {
+  opacity: 10%;
 }
 
 .title {
   height: 130px;
   width: 100%;
   margin: 20px 0;
-  color:rgb(6,102,106);
+  color: rgb(6, 102, 106);
   font-size: 90px;
   font-weight: bold;
   text-align: center;
 }
 
 .display {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   position: relative;
-  top:50px;
+  top: 50px;
   width: 100%;
-  height: 1000px;
 }
 
-.shuffle_button {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(0);
-  width: 120px;
-  height: 50px;
+.buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
   margin: 30px 0px;
-  color: rgb(230,220,193);;
-  background: rgb(245,87,0);
+  height: 100px;
+}
+
+.bt {
+  left: 50%;
+
+  margin: 25px 20px;
+  color: rgb(230, 220, 193);
+
   border-radius: 30px;
   /* box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; */
   font-size: 20px;
@@ -42,11 +76,22 @@ html{
   line-height: 50px;
   cursor: pointer;
   user-select: none;
+  transform: translateY(0);
   transition: all ease 0.3s;
 }
-.shuffle_button:hover {
+
+.bt:hover {
   box-shadow: none;
-  transform: translateX(-50%) translateY(3px);
+  transform: translateY(3px);
+}
+
+.shuffle_button {
+  width: 120px;
+  background: rgb(245, 87, 0);
+}
+
+.boxes {
+  position: relative;
 }
 
 .shuffle_display {
@@ -54,47 +99,46 @@ html{
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: center;
-  position:absolute;
-  top:150px;
-  left:0;
-  right:0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
   width: 95%;
   margin: auto auto;
   /* background: white; */
 }
 
-.box{
+.box {
   width: 100px;
-  height:100px;
+  height: 100px;
   margin: 2vw;
 }
 
-.box.box_display_0{
+.box.box_display_0 {
   position: relative;
-  background: rgb(6,102,106);
+  background: rgb(6, 102, 106);
 }
 
-.box.box_display_1{
+.box.box_display_1 {
   position: relative;
   clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%);
-  background: rgb(245,87,0);
+  background: rgb(245, 87, 0);
 }
 
-.number{
-  color:white;
+.number {
+  color: white;
   font-size: 30px;
   font-weight: bold;
 }
 
-.number_0{
-position: absolute;
-left:10px;
-top:10px;
-}
-
-.number_1{
+.number_0 {
   position: absolute;
-  right:10px;
-  bottom:10px;
+  left: 10px;
+  top: 10px;
 }
 
+.number_1 {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
