@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="input.css" />
   <link rel="stylesheet" href="setting/absent.css" />
   <link rel="stylesheet" href="setting/qrcode.css" />
+  <link rel="stylesheet" href="setting/log.css" />
   <link rel="stylesheet" href="setting/setting.css" />
 
   <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
@@ -29,6 +30,19 @@
         <label class="qr_button">
           <input type="file" accept="image/*" id="qr" />import QRCode
         </label>
+      </div>
+      <div class="log_display">
+        <div class="log_button">
+          Log
+        </div>
+        <div class="texts">
+          <p class="log_txt">
+            2022/6/2: Ver.2.0, Add a settings that are "Absent" and "QRCode"
+          </p>
+          <p class="log_txt">
+            2022/6/3: fixed bugs
+          </p>
+        </div>
       </div>
       <canvas id="canvas" width="500" height="500"></canvas>
     </div>
@@ -54,6 +68,7 @@
   </div>
   <script type="text/javascript" src="shuffle/shuffle.js"></script>
   <script type="text/javascript" src="setting/absent.js"></script>
+  <script type="text/javascript" src="setting/log.js"></script>
   <script type="text/javascript" src="setting/qrcode.js"></script>
 </body>
 
