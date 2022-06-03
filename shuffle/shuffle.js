@@ -66,11 +66,11 @@ document
   });
 
 function Shuffle() {
-  for (let i = 0; i < class_number; i++) {
+  for (let i = class_number - 1; i >= 0; i--) {
     if (
       document
         .getElementsByClassName("absent_number")
-        [i].classList.contains("on")
+      [i].classList.contains("on")
     )
       number.splice(i, 1);
   }
