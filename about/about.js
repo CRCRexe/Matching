@@ -9,19 +9,19 @@ let about_display = document.getElementsByClassName("about_display")[0];
 
 document
   .getElementsByClassName("about_button")[0]
-  .addEventListener("click", open_error);
+  .addEventListener("click", open_about);
 
 document
   .getElementsByClassName("about_close_button")[0]
-  .addEventListener("click", close_error);
+  .addEventListener("click", close_about);
 
-function open_error() {
+function open_about() {
   effect.classList.add("on");
   blackout.classList.add("on");
   about_display.classList.add("open");
 }
 
-function close_error() {
+function close_about() {
   effect.classList.remove("on");
   blackout.classList.remove("on");
   about_display.classList.remove("open");
