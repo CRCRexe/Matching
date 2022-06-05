@@ -8,17 +8,39 @@
     <link rel="stylesheet" href="input.css" />
     <link rel="stylesheet" href="setting/absent.css" />
     <link rel="stylesheet" href="setting/qrcode.css" />
-    <link rel="stylesheet" href="setting/log.css" />
+    <link rel="stylesheet" href="error/error.css" />
+    <link rel="stylesheet" href="about/about.css" />
     <link rel="stylesheet" href="setting/setting.css" />
 
     <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <style></style>
 
   <body>
+    <div class="error_display">
+      <p class="p1">Error</p>
+      <p class="p2">You set less than 0, right?</p>
+      <div class="close_button error_close_button">close</div>
+    </div>
+    <div class="about_display open">
+      <div class="close_button about_close_button">close</div>
+      <!-- <p class="p1">About</p> -->
+      <div class="content">
+        <p class="p2">[2022/6/2] Add settings: "Absent" and "QRCode".</p>
+        <p class="p2">[2022/6/3] Fixed bugs: absent function.</p>
+        <p class="p2">[2022/6/5] Add a function: error message.</p>
+      </div>
+      <a href="https://github.com/CRCRexe/Matching.git">
+        <p class="p1">Source</p>
+      </a>
+    </div>
     <div class="setting_display">
-      <div class="close_button">close</div>
+      <div class="close_button setting_close_button">close</div>
       <div class="setting">
         <div class="absent_diplay">
           <p class="p1">Absent?</p>
@@ -29,15 +51,6 @@
           <label class="qr_button">
             <input type="file" accept="image/*" id="qr" />import QRCode
           </label>
-        </div>
-        <div class="log_display">
-          <div class="log_button">Log</div>
-          <div class="texts">
-            <p class="log_txt">
-              2022/6/2: Add a settings, "Absent" and "QRCode"
-            </p>
-            <p class="log_txt">2022/6/3: fixed bugs, absent function.</p>
-          </div>
         </div>
         <canvas id="canvas" width="500" height="500"></canvas>
       </div>
@@ -52,8 +65,11 @@
       </div>
       <div class="display">
         <div class="buttons">
+          <div class="bt about_button"><i class='bx bxs-food-menu' ></i></div>
           <div class="bt shuffle_button">Shuffle</div>
-          <div class="bt setting_button">Setting</div>
+          <div class="bt setting_button">
+            <i class='bx bxs-cog' ></i></box-icon>
+          </div>
         </div>
         <div class="boxes">
           <div class="shuffle_display"></div>
@@ -63,7 +79,8 @@
     </div>
     <script type="text/javascript" src="shuffle/shuffle.js"></script>
     <script type="text/javascript" src="setting/absent.js"></script>
-    <script type="text/javascript" src="setting/log.js"></script>
+    <script type="text/javascript" src="error/error.js"></script>
+    <script type="text/javascript" src="about/about.js"></script>
     <script type="text/javascript" src="setting/qrcode.js"></script>
   </body>
 </html>
