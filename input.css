@@ -1,61 +1,62 @@
 .cp_iptxt {
-	position: absolute;
-    left:0;
-    right:0;
-	width: 100px;
-	margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100px;
+  margin: auto;
 }
-.cp_iptxt input[type='number']::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-}  
-.cp_iptxt input[type='number'] {
-	font: 20px/24px sans-serif;
-	box-sizing: border-box;
-	width: 100%;
-	letter-spacing: 1px;
-	padding-left: 45px;
-    color:rgb(245,87,0);
-    font-weight: bold;
+.cp_iptxt input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.cp_iptxt input[type='number']:focus {
-	outline: none;
+.cp_iptxt input[type="number"] {
+  font: 20px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 1px;
+  padding-left: 45px;
+  color: rgb(245, 87, 0);
+  font-weight: bold;
+}
+.cp_iptxt input[type="number"]:focus {
+  outline: none;
 }
 .ef {
-	padding: 4px 0;
-	border: 0;
-	border-bottom: 2px solid rgb(6,102,106);
-	background-color: transparent;
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 2px solid rgb(6, 102, 106);
+  background-color: transparent;
 }
 .ef ~ .focus_line {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-	transition: 0.4s;
-	background-color: rgb(245,87,0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: 0.4s;
+  background-color: rgb(245, 87, 0);
 }
 .ef:focus ~ .focus_line,
 .cp_iptxt.ef ~ .focus_line {
-	width: 100%;
-	transition: 0.4s;
+  width: 100%;
+  transition: 0.4s;
 }
 .ef ~ label {
-	position: absolute;
-	z-index: -1;
-	top: 4px;
-	left: 0;
-	width: 100%;
-	transition: 0.3s;
-	letter-spacing: 0.5px;
-	color: rgb(6,102,106);
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: rgb(6, 102, 106);
 }
-.ef:focus ~ label, .cp_iptxt.ef ~ label {
-	font-size: 12px;
-	top: -0px;
-	transition: 0.3s;
-	color: #da3c41;
+.ef:focus ~ label,
+.cp_iptxt.ef ~ label {
+  font-size: 12px;
+  top: -0px;
+  transition: 0.3s;
+  color: #da3c41;
 }
 
 /* .input_class_num{

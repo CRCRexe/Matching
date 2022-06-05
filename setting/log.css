@@ -5,7 +5,7 @@
 }
 
 .log_display.open {
-  height: 130px;
+  height: auto;
 }
 
 .log_button {
@@ -29,7 +29,7 @@
   width: 80%;
   margin: 0 auto;
   opacity: 0%;
-  transition: all ease 0.3s;
+  /* transition: all ease 0.3s; */
 }
 .texts.open {
   opacity: 100%;
