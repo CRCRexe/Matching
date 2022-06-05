@@ -1,11 +1,4 @@
-.setting_button {
-  width: 50px;
-  background: rgb(6, 102, 106);
-  line-height: 53px;
-  transform: rotateZ(0);
-  transition: all ease 0.3s;
-}
-.setting_display {
+.error_display {
   position: absolute;
   top: 100px;
   left: 0;
@@ -21,14 +14,15 @@
   transform: scale(105%);
   transition: all ease 0.3s;
 }
-.setting_display.open {
+
+.error_display.open {
   transform: scale(100%);
   opacity: 100%;
   pointer-events: all;
   user-select: none;
 }
 
-.close_button {
+.error_close_button {
   width: 120px;
   height: 40px;
   margin: 30px auto;
@@ -44,22 +38,23 @@
   transition: all ease 0.3s;
 }
 
-.close_button:hover {
+.error_close_button:hover {
   transform: scale(105%) rotate(-1deg);
 }
 
-.setting {
-  position: relative;
+.error_display .p1 {
+  margin: 20px auto 0 auto;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
 }
 
-.p1 {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin: 10px auto;
-  text-align: center;
+.error_display .p2 {
+  margin: 10px auto 0 auto;
+  padding: 15px;
   color: white;
+  background: rgb(245, 87, 0);
   font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
 }

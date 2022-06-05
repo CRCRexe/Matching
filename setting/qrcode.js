@@ -1,5 +1,5 @@
 var names = new Array();
-var qu_successful = false;
+var qr_successful = false;
 
 document.getElementById("qr").addEventListener("change", previewImage, false);
 
@@ -23,9 +23,11 @@ function previewImage() {
         class_number = names.length;
         document.getElementsByClassName("ef")[0].value = class_number;
 
-        qu_successful = true;
+        qr_successful = true;
         close_setting();
         open_setting();
+      } else {
+        open_error("Is this QR Code...?");
       }
     };
   };

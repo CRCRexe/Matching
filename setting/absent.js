@@ -12,7 +12,7 @@ document
   .addEventListener("click", open_setting);
 
 document
-  .getElementsByClassName("close_button")[0]
+  .getElementsByClassName("setting_close_button")[0]
   .addEventListener("click", close_setting);
 
 function open_setting() {
@@ -29,6 +29,8 @@ function open_setting() {
       set_absent_numbers();
     }
     class_number_save = class_number;
+  } else {
+    open_error("You set less than 1, right?");
   }
 }
 function close_setting() {
@@ -43,7 +45,12 @@ function set_absent_numbers() {
   for (let i = 0; i < class_number; i++) {
     const new_div = document.createElement("div");
     new_div.className = "absent_number";
-    new_div.innerHTML = i + 1;
+    if (qr_successful) {
+      new_div.innerHTML = names[i];
+    } else {
+      new_div.innerHTML = i + 1;
+    }
+
     absent_numbers.appendChild(new_div);
   }
 
