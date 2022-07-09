@@ -1,6 +1,7 @@
 .qr_diplay {
   position: relative;
   height: 150px;
+  margin-bottom: 10px;
 }
 
 .qr_buttons {
