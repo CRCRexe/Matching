@@ -34,6 +34,7 @@ function close_saveData_setName() {
 document.getElementById("saveData_qr").addEventListener("change", loadQRCode, false);
 let save_names = new Array();
 let save_names_qr_successful = false;
+
 function loadQRCode() {
   var fileReader = new FileReader();
   fileReader.onload = function () {
@@ -52,6 +53,7 @@ function loadQRCode() {
         let str = text_decoder.decode(Uint8Array.from(code.binaryData).buffer);
         save_names = str.split(",");
 
+        document.querySelector(".setName_input input").value = "";
         document.getElementsByClassName("saveData_display")[0].classList.remove("open");
         document.getElementsByClassName("saveData_setName_display")[0].classList.add("open");
 
