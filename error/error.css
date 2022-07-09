@@ -8,7 +8,7 @@
   background: rgb(6, 102, 106);
   border-radius: 20px;
   opacity: 0%;
-  z-index: 100;
+  z-index: 1000;
   pointer-events: none;
   user-select: none;
   transform: scale(105%);

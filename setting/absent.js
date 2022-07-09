@@ -7,13 +7,9 @@ let absent_numbers = document.getElementsByClassName("absent_numbers")[0];
 let setting_toggle = false;
 var absent = 0;
 
-document
-  .getElementsByClassName("setting_button")[0]
-  .addEventListener("click", open_setting);
+document.getElementsByClassName("setting_button")[0].addEventListener("click", open_setting);
 
-document
-  .getElementsByClassName("setting_close_button")[0]
-  .addEventListener("click", close_setting);
+document.getElementsByClassName("setting_close_button")[0].addEventListener("click", close_setting);
 
 function open_setting() {
   class_number = element.value;
@@ -33,9 +29,12 @@ function open_setting() {
     open_error("You set less than 1, right?");
   }
 }
-function close_setting() {
-  effect.classList.remove("on");
-  blackout.classList.remove("on");
+function close_setting(flag = false) {
+  if (flag) {
+    effect.classList.remove("on");
+    blackout.classList.remove("on");
+  }
+
   setting_display.classList.remove("open");
   setting_button.classList.remove("open");
   setting_toggle = false;

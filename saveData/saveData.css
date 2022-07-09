@@ -1,0 +1,150 @@
+.saveData_display {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background: rgb(6, 102, 106);
+  border-radius: 20px;
+  opacity: 0%;
+  z-index: 200;
+  pointer-events: none;
+  user-select: none;
+  transform: scale(105%);
+  transition: all ease 0.3s;
+}
+.saveData_display.open {
+  transform: scale(100%);
+  opacity: 100%;
+  pointer-events: all;
+  user-select: none;
+}
+
+.saveData_display.open .p1 {
+  margin: 30px 0;
+  color: white;
+}
+
+.data_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: center;
+  margin: 20px 0;
+}
+
+.data_button {
+  height: 50px;
+  margin: 10px;
+  padding: 0 30px;
+  color: white;
+  background: rgb(245, 87, 0);
+  font-size: 20px;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.data_button.on {
+  color: black;
+  background: white;
+}
+
+.saveData_display .add_button {
+  padding: 20px 40px;
+  margin: 0 5px;
+  color: white;
+  background: rgb(245, 87, 0);
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.saveData_display .add_button input {
+  display: none;
+}
+
+.add_button_align {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+}
+
+.saveData_display .remove_button {
+  padding: 20px 25px;
+  color: white;
+  margin: 0 5px;
+  background: rgb(245, 87, 0);
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.saveData_display .remove_button.on {
+  color: black;
+  background: white;
+}
+
+/* setName_display */
+
+.saveData_setName_display {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  background: rgb(6, 102, 106);
+  border-radius: 20px;
+  opacity: 0%;
+  z-index: 300;
+  pointer-events: none;
+  user-select: none;
+  transform: scale(105%);
+  transition: all ease 0.3s;
+}
+
+.saveData_setName_display.open {
+  transform: scale(100%);
+  opacity: 100%;
+  pointer-events: all;
+  user-select: none;
+}
+
+.setName_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.setName_input input {
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 0;
+  border: none;
+
+  width: 200px;
+  height: 30px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.saveData_setName_display.open .apply_button {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px 0px;
+  color: white;
+  background: rgb(245, 87, 0);
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+}

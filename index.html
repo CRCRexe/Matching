@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="error/error.css" />
     <link rel="stylesheet" href="about/about.css" />
     <link rel="stylesheet" href="setting/setting.css" />
+    <link rel="stylesheet" href="saveData/saveData.css" />
 
     <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
     <link
@@ -35,10 +36,37 @@
         <p class="p2">[2022/6/3] Fixed bugs: absent function.</p>
         <p class="p2">[2022/6/5] Add a function: error message.</p>
         <p class="p2">[2022/6/5] importing QRCode, numbers are changed to names.</p>
+        <p class="p2">[2022/7/9] QRCode can be saved and named.</p>
       </div>
       <a href="https://github.com/CRCRexe/Matching.git">
         <p class="p1">Source Code</p>
       </a>
+    </div>
+    
+    <div class="saveData_setName_display">
+      <div class="close_button saveData_setName_close_button">close</div>
+      <p class="p1">Name this QRCode</p>
+      <div class="setName_input">
+        <input type="text">
+        <div class="apply_button">Apply</div>
+      </div>
+ 
+    </div>
+
+     <div class="saveData_display">
+       <div class="close_button saveData_close_button">close</div>
+      
+      <div class="add_button_align">
+       <label class="add_button">
+         <input type="file" accept="image/*" id="saveData_qr" />Add
+       </label>
+       <div class="remove_button">remove</div>
+       </div>
+       <p class="p1">DATA</p>
+       <div class="white_line"></div>
+      <div class="data_buttons">
+      </div>
+     
     </div>
     <div class="setting_display">
       <div class="close_button setting_close_button">close</div>
@@ -49,9 +77,12 @@
         </div>
         <div class="qr_diplay">
           <p class="p1">need names?</p>
-          <label class="qr_button">
-            <input type="file" accept="image/*" id="qr" />import QRCode
-          </label>
+          <div class="qr_buttons">
+            <label class="qr_button qr_button_0">
+              <input type="file" accept="image/*" id="qr" />import QRCode
+            </label>
+            <div class="qr_button qr_button_1">select QRCode</div>
+          </div>
         </div>
         <canvas id="canvas" width="500" height="500"></canvas>
       </div>
@@ -83,5 +114,6 @@
     <script type="text/javascript" src="error/error.js"></script>
     <script type="text/javascript" src="about/about.js"></script>
     <script type="text/javascript" src="setting/qrcode.js"></script>
+    <script type="text/javascript" src="saveData/saveData.js"></script>
   </body>
 </html>
