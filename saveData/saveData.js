@@ -86,7 +86,8 @@ function open_saveData() {
   for (key in localStorage) {
     if (localStorage.hasOwnProperty(key)) {
       let new_div = document.createElement("div");
-      new_div.className = `data_button data_button_${loop_num}`;
+      if (!remove_flag) new_div.className = `data_button data_button_${loop_num}`;
+      else new_div.className = `data_button data_button_${loop_num} on`;
       new_div.innerHTML = key;
       data_buttons.appendChild(new_div);
     }
